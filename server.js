@@ -12,7 +12,7 @@ app.get('/', (req, res) => {
   res.send('Welcome to the Healthy Recipes App!');
 });
 
-mongoose.connect('mongodb://localhost:27017/gesunde-rezepte', {
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/gesunde-rezepte', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 }).then(() => {
