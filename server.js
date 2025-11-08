@@ -29,3 +29,8 @@ process.on('uncaughtException', err => {
   console.error('There was an uncaught error:', err);
   process.exit(1);
 });
+
+app.use((err, req, res, next) => {
+  console.error(err.stack);
+  res.status(500).send('Something broke!');
+});
