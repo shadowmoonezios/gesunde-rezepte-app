@@ -1,0 +1,23 @@
+{
+  "name": "gesunde-rezepte-app",
+  "version": "1.0.0",
+  "description": "Eine App zum Finden und Teilen gesunder Rezepte.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js",
+    "client-start": "cd client && npm start",
+    "server-start": "nodemon server.js",
+    "dev": "concurrently "npm run server-start" "npm run client-start""
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.10.9",
+    "jsonwebtoken": "^8.5.1",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7",
+    "concurrently": "^5.3.0"
+  }
+}
