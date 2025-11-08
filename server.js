@@ -23,3 +23,8 @@ mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/gesunde-r
   console.error('Database connection failed:', err.message);
   process.exit(1);
 });
+
+process.on('uncaughtException', err => {
+  console.error('There was an uncaught error:', err);
+  process.exit(1);
+});
