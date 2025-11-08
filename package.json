@@ -1,7 +1,7 @@
 {
   "name": "gesunde-rezepte-app",
   "version": "1.0.0",
-  "description": "Eine App zum Finden und Teilen gesunder Rezepte.",
+  "description": "Eine Anwendung zum Finden und Teilen gesunder Rezepte für eine ausgewogene Ernährung.",
   "main": "index.js",
   "scripts": {
     "start": "node server.js",
