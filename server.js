@@ -9,7 +9,7 @@ app.use(express.json());
 const PORT = process.env.PORT || 5000;
 
 app.get('/', (req, res) => {
-  res.send('Willkommen in der Gesunden Rezepte App!');
+  res.send('Welcome to the Healthy Recipes App!');
 });
 
 mongoose.connect('mongodb://localhost:27017/gesunde-rezepte', {
@@ -17,8 +17,8 @@ mongoose.connect('mongodb://localhost:27017/gesunde-rezepte', {
   useUnifiedTopology: true,
 }).then(() => {
   app.listen(PORT, () => {
-    console.log(`Server läuft auf Port ${PORT}`);
+    console.log(`Server running on port ${PORT}`);
   });
 }).catch(err => {
-  console.error('Datenbankverbindung fehlgeschlagen:', err);
+  console.error('Database connection failed:', err);
 });
